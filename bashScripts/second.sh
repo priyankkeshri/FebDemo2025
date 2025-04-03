@@ -5,15 +5,10 @@ echo 'this is second shell script'
 if [[ "$1" -eq "$2" ]]
 then
 	echo 'both are equal.'
-	
-fi
-
-if [[ "$1" -gt "$2" ]]
+elif [[ "$1" -gt "$2" ]]
 then
 	echo "$1 is greater than $2"
-fi
-
-if [[ "$1" -lt "$2" ]]; then
+elif [[ "$1" -lt "$2" ]]; then
 	echo "$1 is less than $2"
 fi
 
