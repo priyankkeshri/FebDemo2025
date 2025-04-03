@@ -17,7 +17,7 @@ if [[ "$1" -lt "$2" ]]; then
 	echo "$1 is less than $2"
 fi
 
-if [[ "$1" -nt "$2" ]]; then 
+if [[ "$1" -ne "$2" ]]; then 
 echo "both are not equal"
 fi
 
