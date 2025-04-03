@@ -4,7 +4,7 @@ jobDetail='The main job for this activity is to Complete the job on time. Eg. Jo
 echo "${jobDetail,,}"
 echo "${#jobDetail}"
 
-kaam=${jobDetail/job/kaam}
+kaam=${jobDetail//job/kaam}
 echo "${kaam^^}"
 echo "${#kaam}"
 
