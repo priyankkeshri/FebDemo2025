@@ -9,11 +9,11 @@ echo "${kaam^^}"
 echo "${#kaam}"
 
 string="$1"
+echo "$string"
 
-if [[${string,,} == "hi"]]; then
+if [[ ${string,,} == "hi" ]]; then
 echo "both string are equal"
-fi
-elseif [[${string,,} == *"hi"*]]; then
+elif [[ ${string,,} == *"hi"* ]]; then
 echo "$string contains hi"
 fi
 
