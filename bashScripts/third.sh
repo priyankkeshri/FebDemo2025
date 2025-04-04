@@ -8,4 +8,15 @@ kaam=${jobDetail//job/kaam}
 echo "${kaam^^}"
 echo "${#kaam}"
 
-echo "end now3"
+string="$1"
+
+if [[${string,,} == "hi"]]; then
+echo "both string are equal"
+fi
+elseif [[${string,,} == *"hi"*]]; then
+echo "$string contains hi"
+fi
+
+
+
+
