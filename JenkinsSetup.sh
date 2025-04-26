@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo 'updating apt'
+sudo apt update
+
 echo 'installing java jdk'
 sudo apt install -y openjdk-21-jdk
 
@@ -10,7 +13,6 @@ sudo apt-get update
 sudo apt-get install -y jenkins
 
 echo 'starting jenkins'
-
 sudo systemctl start jenkins
 
 echo 'setup done'
