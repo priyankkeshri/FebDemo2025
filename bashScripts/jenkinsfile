@@ -14,6 +14,9 @@ pipeline{
             sleep 120
         }
       }
+        stage("deploy"){
+            
+        }
     }
 
 }
