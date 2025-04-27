@@ -4,11 +4,13 @@ pipeline{
       stage("compile"){
         steps{
             echo ('compiling the code')
+sleep 120
         }
       }
       stage("build"){
         steps{
             echo ('building the code')
+sleep 120
         }
       }
     }
