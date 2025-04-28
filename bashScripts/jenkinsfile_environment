@@ -1,22 +1,20 @@
 pipeline{
-    agent any
-    stages{
-		environment{
+    	agent any
+	environment{
 			APP "Java"
 			ENV "prod"
 		}
-	
-	  stage("check"){
+    	stages{
+		stage("check"){
 			steps{
 			sh 'env'
 		}
 	  }	   
-	  stage("BUILD"){
-		steps{
+	  	stage("BUILD"){
+			steps{
 			echo "in GROOVY----- APP_TYPE: $APP, ENV: $ENV "
 			sh '''
 				echo "in shell------ APP_TYPE: $APP, ENV: $ENV"
-		
 			'''
 		}
 	  }      
