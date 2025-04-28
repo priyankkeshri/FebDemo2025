@@ -1,8 +1,8 @@
 pipeline{
     	agent any
 	environment{
-			APP "Java"
-			ENV "prod"
+			APP="Java"
+			ENV="prod"
 		}
     	stages{
 		stage("check"){
