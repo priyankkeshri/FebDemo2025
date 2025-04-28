@@ -13,7 +13,7 @@ label "slave1"
       }
       stage("build"){
 agent{
-label "slave1"
+label "slave2"
 }
         steps{
             echo ('building the code')
