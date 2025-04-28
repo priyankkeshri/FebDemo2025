@@ -1,0 +1,24 @@
+pipeline{
+    agent any
+    stages{
+		environment{
+			APP "Java"
+			ENV "prod"
+		}
+	
+	  stage("check"){
+			steps{
+			sh 'env'
+		}
+	  }	   
+	  stage("BUILD"){
+		steps{
+			echo "in GROOVY----- APP_TYPE: $APP, ENV: $ENV "
+			sh '''
+				echo "in shell------ APP_TYPE: $APP, ENV: $ENV"
+		
+			'''
+		}
+	  }      
+    }
+}
