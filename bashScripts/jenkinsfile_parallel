@@ -1,38 +1,38 @@
 pipeline{
     agent any
     stages{
-				  stage("compile"){
-					
-					steps{
-						echo ('compiling the code')
-						sleep 5
-						//sh 'exit 1'
-					}
-				  }
-				  
-				  stage("Parallel stages"){
-					parallel{
-						stage("Test1"){
-							step{
-								echo "this is test1 in chrome"
-							}
-						}
-						stage("Test2"){
-							step{
-								echo "this is test2 in firefox"
-							}
-						}
-						
-					}
-				  }
-				  
-				  stage("build"){
+	  stage("compile"){
+		
+		steps{
+			echo ('compiling the code')
+			sleep 5
+			//sh 'exit 1'
+		}
+	  }
+	  
+	  stage("Parallel stages"){
+		parallel{
+			stage("Test1"){
+				step{
+					echo "this is test1 in chrome"
+				}
+			}
+			stage("Test2"){
+				step{
+					echo "this is test2 in firefox"
+				}
+			}
 			
-					steps{
-						echo ('building the code')
-						sleep 5
-					}
-				  }
+		}
+	  }
+	  
+	  stage("build"){
+
+		steps{
+			echo ('building the code')
+			sleep 5
+		}
+	  }
        
     }
 
