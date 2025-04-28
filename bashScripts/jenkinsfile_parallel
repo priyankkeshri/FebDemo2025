@@ -13,12 +13,12 @@ pipeline{
 	  stage("Parallel stages"){
 		parallel{
 			stage("Test1"){
-				step{
+				steps{
 					echo "this is test1 in chrome"
 				}
 			}
 			stage("Test2"){
-				step{
+				steps{
 					echo "this is test2 in firefox"
 				}
 			}
