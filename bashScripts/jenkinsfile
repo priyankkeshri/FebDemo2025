@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent none
     stages{
       stage("compile"){
         steps{
@@ -14,12 +14,7 @@ pipeline{
             sleep 120
         }
       }
-        stage("deploy"){
-steps{
-echo "deploy stage"
-}
-            
-        }
+       
     }
 
 }
